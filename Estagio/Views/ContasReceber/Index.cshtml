@@ -1,0 +1,144 @@
+﻿@{
+    ViewData["Title"] = "ContasReceber";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section js{
+    <script src="~/view/ContasReceber/index.js"></script>
+}
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Contas a Receber</h4>
+        </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="cpf">CPF do Cliente</label>
+                        <input type="text" class="form-control" id="cpf">
+                    </div>
+                    <div>
+                        <input type="button" class="btn btn-primary" value="Validar" id="btnPesquisarCliente" onclick="index.btnPesquisarCliente()" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="servico">Serviço</label>
+                            <select class="form-control" id="servico" style="background-color: #202940">
+                            </select>
+                        </div>
+                        <div>
+                            <input type="button" class="btn btn-primary" value="Adicionar" id="btnAddServico" onclick="index.btnAddServico()" />
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table" id="tbServiços">
+                            <thead class=" text-primary">
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Excluir
+                            </th>
+                            </thead>
+                            <tbody id="tbodyServiços">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="servico">Licença</label>
+                            <select class="form-control" id="servico" style="background-color: #202940">
+                            </select>
+                        </div>
+                        <div>
+                            <input type="button" class="btn btn-primary" value="Adicionar" id="btnAddServico" onclick="index.btnAddServico()" />
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table" id="tbServiços">
+                            <thead class=" text-primary">
+                            <th>
+                                Numero Processo
+                            </th>
+                            <th>
+                                Numero Licença
+                            </th>
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Excluir
+                            </th>
+                            </thead>
+                            <tbody id="tbodyServiços">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="servico">Projeto</label>
+                            <select class="form-control" id="servico" style="background-color: #202940">
+                            </select>
+                        </div>
+                        <div>
+                            <input type="button" class="btn btn-primary" value="Adicionar" id="btnAddServico" onclick="index.btnAddServico()" />
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table" id="tbServiços">
+                            <thead class=" text-primary">
+                            <th>
+                                Descricao
+                            </th>
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Excluir
+                            </th>
+                            </thead>
+                            <tbody id="tbodyServiços">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="cnae">Valor Total</label>
+                        <input type="number" class="form-control" id="cnae">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="dtinicial">Data de recebimento</label>
+                        <input type="date" class="form-control" id="dtinicial">
+                    </div>
+                </div>
+
+
+                <div id="divMsg"></div>
+                <div class="text-center">
+                    <input type="button" class="btn btn-primary" value="Gerar Contas" id="btnlicenca" onclick="index.btnlicenca()" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

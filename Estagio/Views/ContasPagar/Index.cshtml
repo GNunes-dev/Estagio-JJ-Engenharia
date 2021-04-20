@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "ContasPagar";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section js{
+    <script src="~/view/ContasPagar/index.js"></script>
+}
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Contas a Pagar</h4>
+        </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="servico">Tipo de Despesa</label>
+                        <select class="form-control" id="servico" style="background-color: #202940">
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="dtinicial">Data de Pagamento</label>
+                        <input type="date" class="form-control" id="dtinicial">
+                    </div>                
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="cnae">Valor Total</label>
+                        <input type="number" class="form-control" id="cnae">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="cnae">Quantidade de Parcelas</label>
+                        <input type="number" class="form-control" id="cnae">
+                    </div>
+                </div>
+
+                    <div id="divMsg"></div>
+                    <div class="text-center">
+                        <input type="button" class="btn btn-primary" value="Gerar Conta" id="btnlicenca" onclick="index.btnlicenca()" />
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

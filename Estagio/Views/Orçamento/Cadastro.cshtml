@@ -1,0 +1,130 @@
+﻿@{
+    ViewData["Title"] = "Orçamento";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section js{
+    <script src="~/view/Orçamento/cadastro.js"></script>
+}
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Orçamento</h4>
+        </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="cliente">Cliente</label>
+                        <select class="form-control" id="cliente" style="background-color: #202940">
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="setor">Setor</label>
+                        <select class="form-control" id="setor" style="background-color: #202940" onchange="cadastro.buscarServiço(this.value)">
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="formapag">Forma de Pagamento</label>
+                        <select class="form-control" id="formapag" style="background-color: #202940">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="descriçao">Descrição</label>
+                        <input type="text" class="form-control" id="descriçao">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="vencimento">Vencimento</label>
+                        <input type="date" class="form-control" id="vencimento">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="serviço">Serviço</label>
+                        <select class="form-control" id="serviço" style="background-color: #202940">
+                        </select>
+                        <input type="button" class="btn btn-primary" value="Adicionar" id="btnAddServico" onclick="cadastro.btnAddServico()" />
+                    </div>
+
+                </div>
+
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-primary">
+                        <center>Serviços</center>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" id="tbServiços">
+                            <thead class=" text-primary">
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Excluir
+                            </th>
+                            </thead>
+                            <tbody id="tbodyServiços">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="licença">Licença</label>
+                        <select class="form-control" id="licença" style="background-color: #202940">
+                        </select>
+                        <input type="button" class="btn btn-primary" value="Adicionar" id="btnAddLicença" onclick="cadastro.btnAddLicença()" />
+                    </div>
+
+                </div>
+
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-primary">
+                        <center>Licenças</center>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" id="tbLicenças">
+                            <thead class=" text-primary">
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Excluir
+                            </th>
+                            </thead>
+                            <tbody id="tbodyLicenças">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br />
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="valortotal">Valor Total</label>
+                        <input type="number" class="form-control" id="valortotal">
+                    </div>
+                </div>
+
+                <div id="divMsg"></div>
+                <div class="text-center">
+                    <input type="button" class="btn btn-primary" value="CADASTRAR" id="btnCadastrar" onclick="cadastro.btnCadastrar()" />
+                </div>
+            </form>
+    </div>
+    </div>
+</div>

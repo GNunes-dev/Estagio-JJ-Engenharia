@@ -1,0 +1,723 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>J&J Engenharia</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/lib/Mamba/assets/img/favicon.png" rel="icon">
+    <link href="~/lib/Mamba/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/lib/Mamba/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/lib/Mamba/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="~/lib/Mamba/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/lib/Mamba/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="~/lib/Mamba/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="~/lib/Mamba/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/lib/Mamba/assets/css/style.css" rel="stylesheet">
+    
+
+    @RenderSection("css", false)
+    @RenderSection("js", false)
+</head>
+
+<body>
+
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container">
+
+            <div class="logo float-left">
+                <h1 class="text-light"><a href="/Home/index"><span>J&J Engenharia</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav class="nav-menu float-right d-none d-lg-block">
+                <ul>
+                    <li class="active"><a href="#header">Principal</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#team">Equipe</a></li>
+                    <li><a href="#contact">Contato</a>
+                    <li><a href="/Login/index">Login</a></li>
+                    <li><a href="/LoginAdm/index">Login ADM</a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="background-image: url('~/lib/Mamba/assets/img/slide/slide-1.jpg');">
+
+                        <img src="~/lib/Mamba/assets/img/slide/slide-1.jpg" />
+                        <div class="carousel-container">
+                            <div class="carousel-content container">
+                                <h2 class="animated fadeInDown">Bem vindo à <span>J&J Engenharia</span></h2>
+                                <p class="animated fadeInUp">Procurando sempre o melhor para você!</p>
+                                <a href="#about" class="btn-get-started animated fadeInUp scrollto">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="background-image: url('~/lib/Mamba/assets/img/slide/slide-2.jpg');">
+                        <img src="~/lib/Mamba/assets/img/slide/slide-2.jpg" />
+                        <div class="carousel-container">
+                            <div class="carousel-content container">
+                                <h2 class="animated fadeInDown">BlabLa</h2>
+                                <p class="animated fadeInUp">Equipe de respeito.</p>
+                                <a href="#about" class="btn-get-started animated fadeInUp scrollto">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item" style="background-image: url('~/lib/Mamba/assets/img/slide/slide-3.jpg');">
+                        <img src="~/lib/Mamba/assets/img/slide/slide-3.jpg" />
+                        <div class="carousel-container">
+                            <div class="carousel-content container">
+                                <h2 class="animated fadeInDown">LALALA</h2>
+                                <p class="animated fadeInUp">sdhgbsdugbsduig</p>
+                                <a href="#about" class="btn-get-started animated fadeInUp scrollto">leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
+                    <span class="sr-only">Proximo</span>
+                </a>
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+
+            </div>
+        </div>
+    </section><!-- End Hero -->
+
+
+    <main id="main">
+
+
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="row no-gutters">
+                    <!--   <div class="col-lg-6 video-box">
+                    <img src="~/lib/Mamba/assets/img/about.jpg" class="img-fluid" alt="">
+                    <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+                </div>-->
+
+                    <div>
+
+                        <div class="section-title">
+                            <h2>Sobre</h2>
+                            <p>Somos uma empresa iniciante de dois sócios que atuam um na área de engenharia civil e o outro em engenharia ambiental e topografia. Apesar de estarmos apenas começando bla bla blalblalbla </p>
+                            <p>bla bla bla</p>
+                            <p>bla bla bla</p>
+                            <p>bla bla bla</p>
+                            <p>bla bla bla</p>
+                        </div>
+
+                        <!--<div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                        <h4 class="title"><a href="">ajfsbasbfa</a></h4>
+                        <p class="description">asjnajisdnjasna</p>
+                    </div>
+
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-gift"></i></div>
+                        <h4 class="title"><a href="">EEEEEEE</a></h4>
+                        <p class="description">aaaaaaa</p>
+                    </div>-->
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Us Section -->
+        <!-- ======= About Lists Section ======= -->
+        <!-- <section class="about-lists">
+        <div class="container">
+
+            <div class="row no-gutters">
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up">
+                    <span>01</span>
+                    <h4>Valor</h4>
+                    <p>Aqui ficarão alguns itens que damos valor </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="100">
+                    <span>02</span>
+                    <h4>Repellat Nihil</h4>
+                    <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="200">
+                    <span>03</span>
+                    <h4> Ad ad velit qui</h4>
+                    <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="300">
+                    <span>04</span>
+                    <h4>Repellendus molestiae</h4>
+                    <p>Inventore quo sint a sint rerum. Distinctio blanditiis deserunt quod soluta quod nam mider lando casa</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="400">
+                    <span>05</span>
+                    <h4>Sapiente Magnam</h4>
+                    <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 content-item" data-aos="fade-up" data-aos-delay="500">
+                    <span>06</span>
+                    <h4>Facilis Impedit</h4>
+                    <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>End About Lists Section -->
+        <!-- ======= Counts Section =======
+    <section class="counts section-bg">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+                    <div class="count-box">
+                        <i class="icofont-simple-smile" style="color: #20b38e;"></i>
+                        <span data-toggle="counter-up">232</span>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="count-box">
+                        <i class="icofont-document-folder" style="color: #c042ff;"></i>
+                        <span data-toggle="counter-up">521</span>
+                        <p>Projects</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="count-box">
+                        <i class="icofont-live-support" style="color: #46d1ff;"></i>
+                        <span data-toggle="counter-up">1,463</span>
+                        <p>Hours Of Support</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="count-box">
+                        <i class="icofont-users-alt-5" style="color: #ffb459;"></i>
+                        <span data-toggle="counter-up">15</span>
+                        <p>Hard Workers</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Counts Section -->
+        -->
+
+
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Serviços</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+                        <div class="icon"><i class="icofont-tasks-alt"></i></div>
+                        <h4 class="title"><a href="">PROPOSTA TÉCNICA</a></h4>
+                        <p class="description">
+                            O proponente deverá demonstrar a viabilidade técnica e a estimativa das despesas referentes à execução das atividades propostas, com definição e entendimento do local, métodos, logísticas,  e prazos de execução, assegurada a plena exeqüibilidade do objeto da contratação prevista.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+                        <h4 class="title"><a href="">ORÇAMENTO DE OBRAS</a></h4>
+                        <p class="description">
+                            Levantamento de quantidades, análise de memoriais descritivos e editais de concorrência, montagem de pacotes para cotação, lista de insumos e serviços, curva ABC, análise e elaboração de adicionais – Projetos contratuais x Projetos executivos
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="icofont-computer"></i></div>
+                        <h4 class="title"><a href="">BI - BUSINESS INTELIGENCE</a></h4>
+                        <p class="description">
+                            Todas as informações de suas obras de maneira rápida e ágil, através da nuvem, no seu Tablet, Iphone ou Computador.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class="icofont-image"></i></div>
+                        <h4 class="title"><a href="">PLANEJAMENTO DE OBRAS</a></h4>
+                        <p class="description">hbjsnsduvsiduvs</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon"><i class="icofont-settings"></i></div>
+                        <h4 class="title"><a href="">GERENCIAMENTO DE OBRAS</a></h4>
+                        <p class="description">
+                            Acompanhamento detalhado de sua Obra;
+                            Obtenha CONTROLE em tempo real;
+                            Principais ferramentas de Controle e Acompanhamento de Obra;
+                        </p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon"><i class="icofont-building-alt"></i></div>
+                        <h4 class="title"><a href="">mais coisa aqui</a></h4>
+                        <p class="description">bla bla bla</p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+        <!-- ======= Our Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio section-bg">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="section-title">
+                    <h2>Nosso Portfólio</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">Todos</li>
+                            <li data-filter=".filter-app">Eng. Civil</li>
+                            <li data-filter=".filter-card">Eng. Ambiental</li>
+                            <li data-filter=".filter-web">Topografia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Web 3</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 2</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Card 2</h4>
+                                <p>Card</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Web 2</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 3</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Card 1</h4>
+                                <p>Card</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Card 3</h4>
+                                <p>Card</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                        <div class="portfolio-wrap">
+                            <img src="~/lib/Mamba/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Web 3</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                    <a href="~/lib/Mamba/assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="icofont-eye"></i></a>
+                                    <a href="#" title="More Details"><i class="icofont-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Our Portfolio Section -->
+        <!-- ======= Our Team Section ======= -->
+        <section id="team" class="team">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Nossa Equipe</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+                        <div class="member">
+                            <div class="pic"><img src="~/lib/Mamba/assets/img/team/joaobarbosa.jpg" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>João Vitor Barbosa</h4>
+                                <span>Engenheiro Civil</span>
+                                <div class="social">
+                                    <a href=""><i class="icofont-twitter"></i></a>
+                                    <a href="https://www.facebook.com/VitorBarboosa"><i class="icofont-facebook"></i></a>
+                                    <a href="https://instagram.com/eng.joaobarbosa?igshid=yltu2bxai12r"><i class="icofont-instagram"></i></a>
+                                    <a href=""><i class="icofont-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member">
+                            <div class="pic"><img src="~/lib/Mamba/assets/img/team/joaoborges.jpg" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>João Borges</h4>
+                                <span>Engenheiro Ambiental e Topográfico</span>
+                                <div class="social">
+                                    <a href=""><i class="icofont-twitter"></i></a>
+                                    <a href=""><i class="icofont-facebook"></i></a>
+                                    <a href=""><i class="icofont-instagram"></i></a>
+                                    <a href=""><i class="icofont-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </section><!-- End Our Team Section -->
+        <!-- ======= Frequently Asked Questions Section ======= -->
+        <section id="faq" class="faq section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Questões Frequentemente Perguntadas</h2>
+                </div>
+
+                <div class="row  d-flex align-items-stretch">
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up">
+                        <h4>quais a nana?</h4>
+                        <p>
+                            blablalba
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="100">
+                        <h4>qual o lala?</h4>
+                        <p>
+                            uahuahuaha
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="200">
+                        <h4>eeeee?</h4>
+                        <p>
+                            asdsasaddsasda
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="300">
+                        <h4>nanana?</h4>
+                        <p>
+                            asdsadssdasadsdasad
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="400">
+                        <h4>adssadsdasadsdasadsda?</h4>
+                        <p>
+                            asdsadsadsdasadasdadaddsssssssssssasassasaassa
+                        </p>
+                    </div>
+
+                    <div class="col-lg-6 faq-item" data-aos="fade-up" data-aos-delay="500">
+                        <h4>asdbasdjnbka sjdnkajsnd ajndjka sndja?</h4>
+                        <p>
+                            jkfsnakjfnajs asfn jkafnjkasnfjknaskfjna fnsabfaslkfnoashfoaskn lkasbnfasnflkasnfl kabsflkasfa
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Frequently Asked Questions Section -->
+        <!-- ======= Contact Us Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Contato</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6 d-flex align-items-stretch" data-aos="fade-up">
+                        <div class="info-box">
+                            <i class="bx bx-map"></i>
+                            <h3>Endereço</h3>
+                            <p>Martinópolis-SP, Bairro João Cordeiro, Rua João Garbeline nº 73</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info-box">
+                            <i class="bx bx-envelope"></i>
+                            <h3>Email</h3>
+                            <p>vitoorbarbosa40@gmail.com</p>
+                            <p>ou</p>
+                            <p>joaoborgesEMAIL</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="info-box ">
+                            <i class="bx bx-phone-call"></i>
+                            <h3>Telefone</h3>
+                            <p>João Barbosa (18) 996528118</p>
+                            <p>João Borges (18) 996757992</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="form-row">
+                                <div class="col-lg-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" data-rule="minlen:3" data-msg="Por favor digite ao menos 3 letras como nome." />
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-lg-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" data-rule="email" data-msg="Por favor digite um Email válido." />
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Por favor digite ao menos 8 letras como assunto." />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">Carregando..</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Enviar</button></div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Contact Us Section -->
+
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>J&J Engenharia</h3>
+                        <p>
+                            Rua João Garbeline nº 73 <br>
+                            Bairro João Cordeiro, <br>
+                            Martinópolis-SP,<br><br>
+                            <strong>Fone João Barbosa:</strong> (18) 996528118<br>
+                            <strong>Fone João Borges:</strong> (18) 996757992<br>
+                            <strong>Email João Barbosa:</strong> vitoorbarbosa40@gmail.com<br>
+                            <strong>Email João Borges:</strong> blabla@gmail.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Links úteis</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#header">Principal</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about">Sobre</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Serviços</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Termos de Serviço</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Politica de Privacidade</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Engenharia Civil</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Engenharia Ambiental</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Topografia</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Etc</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Etc</a></li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Mamba</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/lib/Mamba/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/php-email-form/validate.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/counterup/counterup.min.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/lib/Mamba/assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/lib/Mamba/assets/js/main.js"></script>
+
+</body>
+
+</html>

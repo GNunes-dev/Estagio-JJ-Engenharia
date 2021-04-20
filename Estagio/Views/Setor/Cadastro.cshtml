@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Cadastro de Setor";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+
+@section js{
+    <script src="~/view/Setor/cadastro.js"></script>
+}
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Cadastro de Setor</h4>
+            <p class="card-category">Preencha o formulário para cadastrar um Setor.</p>
+        </div>
+        <div class="card-body">         
+            <form>
+                    <div class="form-group col-md-6">
+                        <label for="descriçao">Descrição</label>
+                        <input type="text" class="form-control" id="descriçao">
+                    </div>
+                <div id="divMsg"></div>
+                <div class="text-center">
+                    <input type="button" class="btn btn-primary" value="CADASTRAR" id="btnCadastrar" onclick="cadastro.btnCadastrar()" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

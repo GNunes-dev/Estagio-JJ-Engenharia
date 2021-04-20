@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Quitar Recebimento";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section js{
+    <script src="~/view/QuitarRecebimento/index.js"></script>
+}
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Quitar Recebimento</h4>
+        </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="cpf">CPF do Cliente</label>
+                        <input type="text" class="form-control" id="cpf">
+                    </div>
+                    <div>
+                        <input type="button" class="btn btn-primary" value="Pesquisar" id="btnPesquisarCliente" onclick="index.btnPesquisarCliente()" />
+                    </div>
+
+                    <label for="tbServiços">Tabela de Contas do Usuario</label>
+                    <div class="table-responsive">
+                        <table class="table" id="tbServiços">
+                            <thead class=" text-primary">
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Data vencimento
+                            </th>
+                            <th>
+                                Selecionar
+                            </th>
+                            </thead>
+                            <tbody id="tbodyServiços">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="cnae">Valor Total</label>
+                        <input type="number" class="form-control" id="cnae">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="dtinicial">Data de recebimento</label>
+                        <input type="date" class="form-control" id="dtinicial">
+                    </div>
+                </div>
+
+
+                <div id="divMsg"></div>
+                <div class="text-center">
+                    <input type="button" class="btn btn-primary" value="Quitar" id="btnlicenca" onclick="index.btnlicenca()" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

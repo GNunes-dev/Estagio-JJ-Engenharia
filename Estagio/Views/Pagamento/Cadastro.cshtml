@@ -1,0 +1,132 @@
+﻿@{
+    ViewData["Title"] = "Pagamentos";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section css{
+
+    <link href="~/lib/Dashboard/assets/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/Dashboard/assets/datatables-responsive/css/responsive.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/Dashboard/assets/sweetalert2-theme-bootstrap-4/bootstrap-4.css" rel="stylesheet" >
+}
+
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Pagamentos</h4>
+        </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-9">
+                        <label for="descriçao">Descrição</label>
+                        <input type="text" class="form-control" id="descriçao">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="formapag">Forma de Pagamento</label>
+                        <select class="form-control" id="formapag" style="background-color: #202940">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-3">
+                        <label for="valortotal">Valor Total</label>
+                        <input type="text" class="form-control" id="valortotal">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="dtpag">Data Vencimento</label>
+                        <input type="date" class="form-control" id="dtpag">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="numparcela">Numero de Parcelas</label>
+                        <select class="form-control" id="numparcela" style="background-color: #202940" onchange="cadastro.gerarParcela()">
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="card" id="tbParcela" style="display:none">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">Tabela de Parcelas</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table" id="tabelaParcela">
+                                <thead class=" text-primary">
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Valor Parcela
+                                </th>
+                                <th>
+                                    Data Vencimento
+                                </th>
+                                <th>
+                                    Editar
+                                </th>
+                                </thead>
+                                <tbody id="tbodyParcela">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="divMsg"></div>
+                <div class="text-center">
+                    <input type="button" class="btn btn-primary" value="CADASTRAR" id="btnCadastrar" onclick="cadastro.btnCadastrar()" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Parcela</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group col-md-4">
+                    <label for="valorparc">Valor Parcela</label>
+                    <input type="text" class="form-control" style="color:black;" id="valorparc">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="novadata">Data Vencimento</label>
+                    <input type="date" class="form-control" style="color:black;" id="novadata">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btneditar" onclick="cadastro.alterartabela()">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section js{
+    <script src="~/lib/Dashboard/assets/datatables/jquery.dataTables.js"></script>
+
+    <script src="~/lib/Dashboard/assets/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/dataTables.responsive.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/responsive.bootstrap4.js"></script>
+    <script src="~/lib/Dashboard/assets/package/dist/sweetalert2.all.min.js"></script>
+    <script src="~/lib/Dashboard/assets/jquery.mask.js"></script>
+    <script src="~/view/Pagamento/cadastro.js"></script>
+}

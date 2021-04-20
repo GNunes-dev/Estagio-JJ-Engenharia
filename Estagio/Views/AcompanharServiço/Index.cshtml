@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Acompanhar Serviços";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+@section css{
+
+    <link href="~/lib/Dashboard/assets/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/Dashboard/assets/datatables-responsive/css/responsive.bootstrap4.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div class="col-md-10">
+
+        <div class="card" id="tbAcompServ" style="display:none">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title ">Meus Serviços</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="tabelaAcompServ">
+                        <thead class=" text-primary">
+                        <th>
+                            Cliente
+                        </th>
+                        <th>
+                            Data Inicial
+                        </th>
+                        <th>
+                            Data Prevista Final
+                        </th>
+                        <th>
+                            Data Final
+                        </th>
+                        <th>
+                            Valor Total
+                        </th>
+                        <th>
+                            Ver Tudo
+                        </th>
+                        </thead>
+                        <tbody id="tbodyAcompServ">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section js{
+    <script src="~/lib/Dashboard/assets/datatables/jquery.dataTables.js"></script>
+
+    <script src="~/lib/Dashboard/assets/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/dataTables.responsive.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/responsive.bootstrap4.js"></script>
+
+    <script src="~/view/AcompanharServiço/index.js?v=1"></script>
+
+
+}

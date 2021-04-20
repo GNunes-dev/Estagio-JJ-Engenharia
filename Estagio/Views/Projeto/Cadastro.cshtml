@@ -1,0 +1,296 @@
+﻿@{
+    ViewData["Title"] = "Projeto";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section css{
+
+    <link href="~/lib/Dashboard/assets/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/Dashboard/assets/datatables-responsive/css/responsive.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/Dashboard/assets/sweetalert2-theme-bootstrap-4/bootstrap-4.css" rel="stylesheet" >
+}
+
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Projeto</h4>
+        </div>
+        <div class="card-body">
+
+            <form>
+
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-primary">
+                        <center>Buscar Orçamento</center>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="clienteorça">Cliente</label>
+                            <select class="form-control" id="clienteorça" style="background-color: #202940" onchange="cadastro.buscardesc(this.value)">
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="orçamento">Orçamento</label>
+                            <select class="form-control" id="orçamento" style="background-color: #202940">
+                            </select>
+                            <input type="button" class="btn btn-primary" value="Buscar" id="btnbuscar" onclick="cadastro.buscarOrça()" />
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="cliente">Cliente</label>
+                        <select class="form-control" id="cliente" style="background-color: #202940">
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="setor">Setor</label>
+                        <select class="form-control" id="setor" style="background-color: #202940" onchange="cadastro.buscarServiço(this.value)">
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="crea">Crea</label>
+                        <select class="form-control" id="funcionario" style="background-color: #202940">
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="descriçao">Descrição</label>
+                        <input type="text" class="form-control" id="descriçao">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="dtinicial">Data Inicial</label>
+                        <input type="date" class="form-control" id="dtinicial">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="dtprevfinal">Data Prevista Final</label>
+                        <input type="date" class="form-control" id="dtprevfinal">
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="endereco">Endereco</label>
+                        <input type="text" class="form-control" id="endereco" placeholder="exemplo: Rua que será feito o Serviço, 23">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro">
+                    </div>
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="cep">CEP</label>
+                        <input type="text" class="form-control" id="cep">
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="uf">Estado</label>
+                        <select class="form-control" id="uf" style="background-color: #202940" onchange="cadastro.buscarCidades(this.value)">
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="selCidade">Cidade</label>
+                        <select class="form-control" style="background-color: #202940" id="selCidade">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="serviço">Serviço</label>
+                        <select class="form-control" id="serviço" style="background-color: #202940">
+                        </select>
+                        <input type="button" class="btn btn-primary" value="Adicionar" id="btnAddServico" onclick="cadastro.btnAddServico()" />
+                    </div>
+
+                </div>
+
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-primary">
+                        <center>Serviços</center>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" id="tbServiços">
+                            <thead class=" text-primary">
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Excluir
+                            </th>
+                            </thead>
+                            <tbody id="tbodyServiços">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="licença">Licença</label>
+                        <select class="form-control" id="licença" style="background-color: #202940">
+                        </select>
+                        <input type="button" class="btn btn-primary" value="Adicionar" id="btnAddLicença" onclick="cadastro.btnAddLicença()" />
+                    </div>
+
+                </div>
+
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-primary">
+                        <center>Licenças</center>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" id="tbLicenças">
+                            <thead class=" text-primary">
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Excluir
+                            </th>
+                            </thead>
+                            <tbody id="tbodyLicenças">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="status">Status</label>
+                        <textarea class="form-control" id="status" rows="5"></textarea>
+                    </div>
+
+                </div>
+
+                <br />
+                <div class="form-row">
+
+                    <div class="form-group col-md-2">
+                        <label for="valortotal">Valor Total</label>
+                        <input type="text" class="form-control" id="valortotal">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label for="dtpag">Data Vencimento</label>
+                        <input type="date" class="form-control" id="dtpag">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="formapag">Forma de Pagamento</label>
+                        <select class="form-control" id="formapag" style="background-color: #202940">
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="numparcela">Numero de Parcelas</label>
+                        <select class="form-control" id="numparcela" style="background-color: #202940" onchange="cadastro.gerarParcela()">
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="card" id="tbParcela" style="display:none">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title ">Tabela de Parcelas</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table" id="tabelaParcela">
+                                <thead class=" text-primary">
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Valor Parcela
+                                </th>
+                                <th>
+                                    Data Vencimento
+                                </th>
+                                <th>
+                                    Editar
+                                </th>
+                                </thead>
+                                <tbody id="tbodyParcela">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="divMsg"></div>
+                <div class="text-center">
+                    <input type="button" class="btn btn-primary" value="CADASTRAR" id="btnCadastrar" onclick="cadastro.btnCadastrar()" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Parcela</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group col-md-4">
+                    <label for="valorparc">Valor Parcela</label>
+                    <input type="text" class="form-control" style="color:black;" id="valorparc">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="novadata">Data Vencimento</label>
+                    <input type="date" class="form-control" style="color:black;" id="novadata">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btneditar" onclick="cadastro.alterartabela()">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section js{
+    <script src="~/lib/Dashboard/assets/datatables/jquery.dataTables.js"></script>
+
+    <script src="~/lib/Dashboard/assets/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/dataTables.responsive.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/responsive.bootstrap4.js"></script>
+    <script src="~/lib/Dashboard/assets/package/dist/sweetalert2.all.min.js"></script>
+    <script src="~/lib/Dashboard/assets/jquery.mask.js"></script>
+    <script src="~/view/Projeto/cadastro.js"></script>
+}

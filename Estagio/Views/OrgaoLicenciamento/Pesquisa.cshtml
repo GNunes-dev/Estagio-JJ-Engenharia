@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Pesquisa de Orgãos de Licenciamento";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+
+@section css{
+
+    <link href="~/lib/Dashboard/assets/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/Dashboard/assets/datatables-responsive/css/responsive.bootstrap4.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div class="col-md-10">
+
+        <div class="card" id="tbOrgaos" style="display:none">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title ">Tabela de Orgãos de Licenciamento</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="tabelaOrgao">
+                        <thead class=" text-primary">
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Descrição
+                        </th>
+                        <th>
+                            Valor
+                        </th>
+                        <th>
+                            Editar
+                        </th>
+                        <th>
+                            Excluir
+                        </th>
+                        </thead>
+                        <tbody id="tbodyOrgaos">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section js{
+    <script src="~/lib/Dashboard/assets/datatables/jquery.dataTables.js"></script>
+
+    <script src="~/lib/Dashboard/assets/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/dataTables.responsive.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/responsive.bootstrap4.js"></script>
+
+    <script src="~/view/OrgaoLicenciamento/pesquisa.js?v=1"></script>
+
+
+}

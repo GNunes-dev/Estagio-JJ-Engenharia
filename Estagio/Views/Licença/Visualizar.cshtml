@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Licença";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section js{
+    <script src="~/view/Licença/visualizar.js"></script>
+}
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <center><h4 class="card-title">Licença</h4></center>
+        </div>
+        <div class="card-body">
+
+            <form>
+                <fieldset disabled>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="cliente">Cliente</label>
+                            <input type="text" class="form-control" id="cliente">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="crea">Crea</label>
+                            <input type="text" class="form-control" id="crea">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="setor">Setor</label>
+                            <input type="text" class="form-control" id="setor">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="orgao">Orgão de Licenciamento</label>
+                            <input type="text" class="form-control" id="orgao">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="valortotal">Valor</label>
+                            <input type="number" class="form-control" id="valortotal">
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="nome">Nome da Licença</label>
+                            <input type="text" class="form-control" id="nome">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="numprocesso">Numero de Processo</label>
+                            <input type="text" class="form-control" id="numprocesso">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="numlicenca">Numero da Licença</label>
+                            <input type="text" class="form-control" id="numlicença">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="versao">Versão</label>
+                            <input type="text" class="form-control" id="versao">
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="cnae">Cnae</label>
+                            <input type="text" class="form-control" id="cnae">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="dtinicial">Data Inicial</label>
+                            <input type="text" class="form-control" id="dtinicial">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="vencimento">Data de Vencimento</label>
+                            <input type="text" class="form-control" id="vencimento">
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+                <div class="text-center">
+                    <input type="button" class="btn btn-primary" value="Ver Documento" id="doc" onclick="visualizar.ver()" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

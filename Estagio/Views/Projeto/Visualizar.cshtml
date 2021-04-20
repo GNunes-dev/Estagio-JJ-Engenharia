@@ -1,0 +1,153 @@
+﻿@{
+    ViewData["Title"] = "Projeto";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section js{
+    <script src="~/view/Projeto/visualizar.js"></script>
+}
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <center><h4 class="card-title">Projeto Gerado</h4></center>
+        </div>
+        <div class="card-body">
+
+            <form>
+                <fieldset disabled>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="cliente">Cliente</label>
+                            <input type="text" class="form-control" id="cliente">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="setor">Setor</label>
+                            <input type="text" class="form-control" id="setor">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="crea">Crea</label>
+                            <input type="text" class="form-control" id="funcionario">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="formapag">Forma de Pagamento</label>
+                            <input type="text" class="form-control" id="formapag">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-8">
+                            <label for="descriçao">Descrição</label>
+                            <input type="text" class="form-control" id="descriçao">
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="dtinicial">Data Inicial</label>
+                            <input type="text" class="form-control" id="dtinicial">
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="dtprevfinal">Data Prevista Final</label>
+                            <input type="text" class="form-control" id="dtprevfinal">
+                        </div>
+                    </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <label for="endereco">Endereco</label>
+                                <input type="text" class="form-control" id="endereco">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" class="form-control" id="bairro">
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="cep">CEP</label>
+                                <input type="text" class="form-control" id="cep">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="uf">Estado</label>
+                                <input type="text" class="form-control" id="uf">
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label for="selCidade">Cidade</label>
+                                <input type="text" class="form-control" id="selCidade">
+                            </div>
+                        </div>
+
+                        <div class="card card-nav-tabs">
+                            <div class="card-header card-header-primary">
+                                <center>Serviços</center>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table" id="tbServiços">
+                                    <thead class=" text-primary">
+                                    <th>
+                                        Nome
+                                    </th>
+                                    <th>
+                                        Valor
+                                    </th>
+                                    </thead>
+                                    <tbody id="tbodyServiços">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="card card-nav-tabs">
+                            <div class="card-header card-header-primary">
+                                <center>Licenças</center>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table" id="tbLicenças">
+                                    <thead class=" text-primary">
+                                    <th>
+                                        Nome
+                                    </th>
+                                    <th>
+                                        Valor
+                                    </th>
+                                    </thead>
+                                    <tbody id="tbodyLicenças">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <label for="status">Status</label>
+                                <textarea class="form-control" id="status" rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="form-row">
+
+                            <div class="form-group col-md-3">
+                                <label for="valortotal">Valor Total</label>
+                                <input type="number" class="form-control" id="valortotal">
+                            </div>
+                        </div>
+
+</fieldset>
+            </form>
+        </div>
+    </div>
+</div>

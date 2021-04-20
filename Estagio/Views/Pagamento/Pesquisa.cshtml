@@ -1,0 +1,90 @@
+﻿@{
+    ViewData["Title"] = "Pesquisa de Pagamentos";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section css{
+
+    <link href="~/lib/Dashboard/assets/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/Dashboard/assets/datatables-responsive/css/responsive.bootstrap4.css" rel="stylesheet" />
+    <link href="~/lib/Dashboard/assets/sweetalert2-theme-bootstrap-4/bootstrap-4.css" rel="stylesheet">
+}
+
+<div class="row">
+    <div class="col-md-10">
+
+        <div class="card" id="tbPagamento" style="display:none">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title ">Tabela de Pagamentos</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="tabelaPagamento">
+                        <thead class=" text-primary">
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            Descrição
+                        </th>
+                        <th>
+                            Forma de Pagamento
+                        </th>
+                        <th>
+                            Data Vencimento
+                        </th>
+                        <th>
+                            Valor Parcela
+                        </th>
+                        <th>
+                            Quitar
+                        </th>
+                        <th>
+                            Quitar Parcial
+                        </th>
+                        </thead>
+                        <tbody id="tbodyPagamento">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Pagar Parcialmente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group col-md-4">
+                    <label for="valorparc">Valor Parcial</label>
+                    <input type="text" class="form-control" style="color:black;" id="valorparc">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btneditar" onclick="pesquisa.alterartabela()">Quitar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section js{
+    <script src="~/lib/Dashboard/assets/datatables/jquery.dataTables.js"></script>
+
+    <script src="~/lib/Dashboard/assets/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/dataTables.responsive.js"></script>
+    <script src="~/lib/Dashboard/assets/datatables-responsive/js/responsive.bootstrap4.js"></script>
+    <script src="~/lib/Dashboard/assets/package/dist/sweetalert2.all.min.js"></script>
+    <script src="~/lib/Dashboard/assets/jquery.mask.js"></script>
+
+    <script src="~/view/Pagamento/pesquisa.js?v=1"></script>
+
+
+}

@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Quitar Pagamento";
+    Layout = "~/Views/Shared/_LayoutADM.cshtml";
+}
+
+@section js{
+    <script src="~/view/QuitarPagamento/index.js"></script>
+}
+
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Quitar Pagamento</h4>
+        </div>
+        <div class="card-body">
+
+            <form>       
+                <div class="form-row">
+                    <div class="table-responsive">
+                        <table class="table" id="tbPagamentos">
+                            <thead class=" text-primary">
+                            <th>
+                                Nome
+                            </th>
+                            <th>
+                                Parcela
+                            </th>
+                            <th>
+                                Data de Vencimento
+                            </th>
+                            <th>
+                                Valor
+                            </th>
+                            <th>
+                                Selecionar
+                            </th>
+                            </thead>
+                            <tbody id="tbodyServiços">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div class="form-row">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="valor">Valor Pago</label>
+                            <input type="number" class="form-control" id="valor">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="dtpag">Data Pagamento</label>
+                            <input type="date" class="form-control" id="dtpag">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="divMsg"></div>
+                <div class="text-center">
+                    <input type="button" class="btn btn-primary" value="Quitar" id="btnlicenca" onclick="index.btnlicenca()" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
